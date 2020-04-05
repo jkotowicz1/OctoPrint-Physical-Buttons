@@ -46,7 +46,7 @@ class PhysicalButtonsPlugin(octoprint.plugin.StartupPlugin,
 			pause = -1,
 			stop = -1,
 			bounce = 300,
-			stopcode = "M112"
+			stopcode = "M117 Cancel TEST"
 		)
 
 	@octoprint.plugin.BlueprintPlugin.route("/status", methods=["GET"])
