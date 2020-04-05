@@ -46,20 +46,7 @@ class PhysicalButtonsPlugin(octoprint.plugin.StartupPlugin,
 			pause = -1,
 			stop = -1,
 			bounce = 300,
-			stopcode = "M84\
-			M117 Test 2 line\
-			;disable all heaters'\
-			{% snippet 'disable_hotends' %}\
-			{% snippet 'disable_bed' %}\
-			;disable fan\
-M106 S0\
-G91 ; relative movements\
-G1 Z20 ; Z up 20mm\
-G90; back to absolute\
-G1 X0 Y210; home X axis and push Y forward\
-M84 ; disable motors\
-M73 P100 R0\
-M73 Q100 S0"
+			stopcode = "M603"
 		)
 
 	@octoprint.plugin.BlueprintPlugin.route("/status", methods=["GET"])
