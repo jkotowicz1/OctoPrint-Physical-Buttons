@@ -55,7 +55,6 @@ M84
 ;disable fan
 M106 S0
 G91 ; relative movements
-G1 F150 ; slow Z rate
 G1 Z20 ; Z up 20mm
 G90; back to absolute
 G1 X0 Y210; home X axis and push Y forward
